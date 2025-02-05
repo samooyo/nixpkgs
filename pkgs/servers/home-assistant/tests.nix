@@ -14,6 +14,7 @@ let
       ibeacon-ble
     ];
     hassio = getComponentDeps "homeassistant_yellow";
+    homeassistant_hardware = getComponentDeps "zha";
     husqvarna_automower_ble = getComponentDeps "gardena_bluetooth";
     lovelace = [
       pychromecast
