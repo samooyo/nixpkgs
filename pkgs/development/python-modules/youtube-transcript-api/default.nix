@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  poetry-core,
+  defusedxml,
   requests,
   mock,
   httpretty,
@@ -12,7 +14,7 @@
 buildPythonPackage rec {
   pname = "youtube-transcript-api";
   version = "0.6.3";
-  format = "setuptools";
+  pyproject = true;
 
   disabled = pythonOlder "3.7";
 
@@ -23,7 +25,14 @@ buildPythonPackage rec {
     hash = "sha256-ZoF9BOQLrq2GVCZ98I8C9qouUhwZKEPp0zlTAqyEoYk=";
   };
 
-  propagatedBuildInputs = [ requests ];
+  build-system = [ poetry-core ];
+
+  pythonRelaxDeps = [ "defusedxml" ];
+
+  dependencies = [
+    defusedxml
+    requests
+  ];
 
   nativeCheckInputs = [
     mock
