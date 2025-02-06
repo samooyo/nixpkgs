@@ -15,6 +15,8 @@ let
     ];
     hassio = getComponentDeps "homeassistant_yellow";
     homeassistant_hardware = getComponentDeps "zha";
+    homeassistant_sky_connect = getComponentDeps "zha";
+    homeassistant_yellow = getComponentDeps "zha";
     husqvarna_automower_ble = getComponentDeps "gardena_bluetooth";
     lovelace = [
       pychromecast
