@@ -11,7 +11,7 @@
 mkDerivation (
   rec {
     pname = "echidna";
-    version = "2.2.3";
+    version = "2.2.6";
 
     src = fetchFromGitHub {
       owner = "crytic";
