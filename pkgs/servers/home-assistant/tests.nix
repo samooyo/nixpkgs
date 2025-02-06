@@ -39,6 +39,7 @@ let
     songpal = [
       isal
     ];
+    swiss_public_transport = getComponentDeps "cookidoo";
     system_log = [
       isal
     ];
